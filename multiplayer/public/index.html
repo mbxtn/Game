@@ -159,8 +159,20 @@
         </div>
     </div>
 
+    <!-- Loading Indicator -->
+    <div id="loading-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[100]">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-2xl text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+            <p id="loading-text" class="text-white text-lg font-medium">Loading...</p>
+            <p id="loading-subtext" class="text-gray-300 text-sm mt-2">Please wait while images are loaded</p>
+        </div>
+    </div>
+
     <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
     <script type="module" src="scryfallCache.js"></script>
-    <script type="module" src="client.js"></script>
+    <!-- Use the new modular client -->
+    <script type="module" src="client-new.js"></script>
+    <!-- Original client for fallback (comment out to test new version) -->
+    <!-- <script type="module" src="client.js"></script> -->
 </body>
 </html>

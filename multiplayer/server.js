@@ -123,7 +123,7 @@ io.on('connection', (socket) => {
         });
         
         io.to(room).emit('state', games[room]);
-        socket.emit('joinSuccess', { roomName, displayName });
+        socket.emit('joinSuccess', { roomName, displayName, playerId: socket.id });
     });
 
     // Handle player rejoin
